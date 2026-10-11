@@ -44,21 +44,21 @@ lineage_generator {
     ],
 }
 
-lineage_generator {
-    name: "prebuilt_kernel_includes",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX) lineage_generator {
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)     name: "prebuilt_kernel_includes",
 
-    // The headers extract command
-    cmd: "mkdir -p $(KERNEL_BUILD_OUT_PREFIX)$(genDir) && gzip -d < $(TARGET_PREBUILT_KERNEL_HEADERS) | tar -x -C $(KERNEL_BUILD_OUT_PREFIX)$(genDir) && vendor/lineage/tools/clean_headers.sh $(KERNEL_BUILD_OUT_PREFIX)$(genDir)",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)     // The headers extract command
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)     cmd: "mkdir -p $(KERNEL_BUILD_OUT_PREFIX)$(genDir) && gzip -d < $(TARGET_PREBUILT_KERNEL_HEADERS) | tar -x -C $(KERNEL_BUILD_OUT_PREFIX)$(genDir) && vendor/lineage/tools/clean_headers.sh $(KERNEL_BUILD_OUT_PREFIX)$(genDir)",
 
-    // Directories that can be imported by a cc_* module generated_headers property
-    export_include_dirs: [
-        "usr/audio/include/uapi",
-        "usr/include",
-        "usr/include/audio",
-        "usr/include/audio/include/uapi",
-        "usr/techpack/audio/include",
-    ],
-}
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)     // Directories that can be imported by a cc_* module generated_headers property
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)     export_include_dirs: [
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)         "usr/audio/include/uapi",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)         "usr/include",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)         "usr/include/audio",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)         "usr/include/audio/include/uapi",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)         "usr/techpack/audio/include",
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX)     ],
+//BTLG-DISABLED(unused, needs KERNEL_BUILD_OUT_PREFIX) }
 
 bootstrap_go_package {
     name: "soong-lineage-mkdir",
